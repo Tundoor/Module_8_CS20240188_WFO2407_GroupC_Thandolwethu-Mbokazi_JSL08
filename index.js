@@ -7,13 +7,14 @@ let bankBranchInstance = null
 class BankBranch {
     constructor (branchInfo) {
                if (bankBranchInstance === null) {
-                bankBranchInstance = branchInfo
+                bankBranchInstance = this     // Created varieble to represent new instance
+                this.branchInfo = branchInfo
                }  else  {
-                return bankBranchInstance
+                return bankBranchInstance    // Returns whether instance is null or not
                } }                                                                                    
    
      getBranchInfo () {
-        return bankBranchInstance.branchInfo
+        return this.bankBranchInstance
     }}
           
 // usage section
