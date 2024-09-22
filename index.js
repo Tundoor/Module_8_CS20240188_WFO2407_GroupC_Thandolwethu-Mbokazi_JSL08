@@ -14,20 +14,31 @@ class BankBranch {
    
      getBranchInfo () {
         return bankBranchInstance.branchInfo
-    }
+    }}
           
 // usage section
-   
+const branchA = new BankBranch({           //Two Instances of Bank Branch
+    name: "Durban Branch",
+    phone: "000 000 000",
+    address: "123 Heaven Avenue"
+});
 
-   
-   
-   
-   
-   
-   
-   
-   
-            }
+const branchB = new BankBranch({
+    name: "Joburg Branch",
+    phone: "111 111 111",
+    address: "123 Angel Road"
+});
+      
+branchA.getBranchInfo()                                
+branchB.getBranchInfo()
+
+if (branchA === branchB) {               //Checks if the two instances are both refering to same Instance
+    console.log("Same Instance")
+} else {
+    console.log("Different Instance")
+}
+
+
 
 
 // 3. In the `BankBranch` class:
